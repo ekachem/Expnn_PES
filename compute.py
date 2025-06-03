@@ -115,7 +115,8 @@ def compute(R,Q, bstr0, bstr1,Mo, resolution=20):
         ax.set_title('%s Contour PES'%Mo)
         ax.set_xlabel('%s'%rr)
         ax.set_ylabel('%s'%rr0)
-        plt.contour(X, Y, Z, 100, cmap='RdGy');
+        #plt.contour(X, Y, Z, 100, cmap='RdGy');
+        plt.contour(X, Y, Z.T, 100, cmap='RdGy');
         plt.colorbar();
 
     if not os.path.isdir('static'):
